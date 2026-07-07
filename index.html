@@ -8,30 +8,29 @@
 
   <meta 
     name="description" 
-    content="An anonymised professional portfolio for Mihai-Emilian Niculae, showcasing A-Level mathematics teaching, principal examiner experience, assessment design and data-informed education practice." 
+    content="An anonymised professional portfolio for Mihai-Emilian Niculae, showcasing mathematics teaching, curriculum development, assessment design, examiner work, data-informed practice and AI-informed education." 
   />
 
   <style>
     :root {
       --white: #ffffff;
 
-      --baby-blue: #eaf7ff;
-      --baby-blue-strong: #c7eaff;
-      --baby-blue-line: #b8ddf2;
+      --blue-bg: #edf8ff;
+      --blue-soft: #cdeeff;
+      --blue-line: #b7e1f5;
 
-      --cream: #fff7ea;
-      --cream-strong: #f4dfbd;
-      --cream-line: #ebd2a8;
+      --cream-bg: #fff7ea;
+      --cream-soft: #f5dfbd;
+      --cream-line: #eed2a5;
 
-      --blue-deep: #082f49;
-      --blue-main: #164969;
-      --blue-soft: #2c6687;
+      --text: #082f49;
+      --text-soft: #174866;
 
       --shadow: rgba(8, 47, 73, 0.08);
       --shadow-strong: rgba(8, 47, 73, 0.14);
 
       --max-width: 1120px;
-      --radius: 22px;
+      --radius: 24px;
     }
 
     * {
@@ -46,7 +45,7 @@
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
       background: var(--white);
-      color: var(--blue-deep);
+      color: var(--text);
       line-height: 1.65;
     }
 
@@ -60,21 +59,19 @@
       overflow: hidden;
     }
 
-    /* HEADER */
-
     .header {
       position: sticky;
       top: 0;
       z-index: 100;
-      background: rgba(255, 255, 255, 0.94);
+      background: rgba(255, 255, 255, 0.96);
       backdrop-filter: blur(16px);
-      border-bottom: 1px solid var(--baby-blue-line);
+      border-bottom: 1px solid var(--blue-line);
     }
 
     .nav {
       max-width: var(--max-width);
       margin: 0 auto;
-      padding: 0.9rem 1.25rem;
+      padding: 0.95rem 1.25rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -91,9 +88,9 @@
       width: 42px;
       height: 42px;
       border-radius: 14px;
-      background: var(--baby-blue);
-      border: 1px solid var(--baby-blue-line);
-      color: var(--blue-deep);
+      background: var(--blue-bg);
+      border: 1px solid var(--blue-line);
+      color: var(--text);
       display: grid;
       place-items: center;
       font-weight: 900;
@@ -107,44 +104,41 @@
     }
 
     .brand-text strong {
-      font-size: 0.95rem;
+      font-size: 0.96rem;
       font-weight: 900;
-      color: var(--blue-deep);
     }
 
     .brand-text span {
       font-size: 0.78rem;
-      color: var(--blue-soft);
+      color: var(--text-soft);
     }
 
     .nav-links {
       display: flex;
-      gap: 1rem;
       flex-wrap: wrap;
+      gap: 1rem;
     }
 
     .nav-links a {
-      color: var(--blue-soft);
+      color: var(--text-soft);
       font-size: 0.9rem;
       font-weight: 800;
       transition: color 0.2s ease;
     }
 
     .nav-links a:hover {
-      color: var(--blue-deep);
+      color: var(--text);
     }
-
-    /* HERO */
 
     .hero {
       background: var(--white);
-      border-bottom: 1px solid var(--baby-blue-line);
+      border-bottom: 1px solid var(--blue-line);
     }
 
     .hero-inner {
       max-width: var(--max-width);
       margin: 0 auto;
-      padding: 6.5rem 1.25rem 5rem;
+      padding: 7rem 1.25rem 5.3rem;
       display: grid;
       grid-template-columns: 1.25fr 0.75fr;
       gap: 3rem;
@@ -153,7 +147,7 @@
 
     .kicker {
       margin: 0 0 1rem;
-      color: var(--blue-soft);
+      color: var(--text-soft);
       text-transform: uppercase;
       letter-spacing: 0.15em;
       font-size: 0.72rem;
@@ -164,20 +158,20 @@
     h2,
     h3 {
       margin-top: 0;
-      color: var(--blue-deep);
+      color: var(--text);
       line-height: 1.08;
     }
 
     h1 {
-      max-width: 820px;
+      max-width: 860px;
       margin-bottom: 1.25rem;
-      font-size: clamp(2.7rem, 6vw, 5.55rem);
+      font-size: clamp(2.75rem, 6vw, 5.55rem);
       letter-spacing: -0.078em;
     }
 
     h2 {
       margin-bottom: 0.75rem;
-      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-size: clamp(2rem, 4vw, 3.15rem);
       letter-spacing: -0.055em;
     }
 
@@ -188,13 +182,13 @@
     }
 
     p {
-      color: var(--blue-main);
+      color: var(--text-soft);
     }
 
     .hero-text {
-      max-width: 750px;
+      max-width: 770px;
       margin: 0 0 1.8rem;
-      color: var(--blue-main);
+      color: var(--text-soft);
       font-size: 1.08rem;
     }
 
@@ -221,29 +215,29 @@
     }
 
     .btn-dark {
-      background: var(--blue-deep);
+      background: var(--text);
       color: var(--white);
       box-shadow: 0 16px 30px var(--shadow-strong);
     }
 
     .btn-light {
       background: var(--white);
-      color: var(--blue-deep);
-      border-color: var(--baby-blue-line);
+      color: var(--text);
+      border-color: var(--blue-line);
       box-shadow: 0 12px 26px var(--shadow);
     }
 
     .hero-card {
-      background: var(--baby-blue);
-      border: 1px solid var(--baby-blue-line);
-      border-radius: 28px;
+      background: var(--blue-bg);
+      border: 1px solid var(--blue-line);
+      border-radius: 30px;
       padding: 1.35rem;
       box-shadow: 0 24px 58px var(--shadow);
     }
 
     .hero-card p {
       margin: 0 0 1rem;
-      color: var(--blue-main);
+      color: var(--text-soft);
       font-size: 0.95rem;
     }
 
@@ -254,7 +248,7 @@
 
     .hero-item {
       background: var(--white);
-      border: 1px solid var(--baby-blue-line);
+      border: 1px solid var(--blue-line);
       border-radius: 18px;
       padding: 0.9rem;
     }
@@ -262,19 +256,17 @@
     .hero-item strong {
       display: block;
       margin-bottom: 0.1rem;
-      color: var(--blue-deep);
+      color: var(--text);
       font-size: 0.92rem;
     }
 
     .hero-item span {
-      color: var(--blue-soft);
+      color: var(--text-soft);
       font-size: 0.84rem;
     }
 
-    /* SECTIONS */
-
     .section {
-      padding: 4.7rem 1.25rem;
+      padding: 4.8rem 1.25rem;
     }
 
     .section.white {
@@ -282,13 +274,13 @@
     }
 
     .section.blue {
-      background: var(--baby-blue);
-      border-top: 1px solid var(--baby-blue-line);
-      border-bottom: 1px solid var(--baby-blue-line);
+      background: var(--blue-bg);
+      border-top: 1px solid var(--blue-line);
+      border-bottom: 1px solid var(--blue-line);
     }
 
     .section.cream {
-      background: var(--cream);
+      background: var(--cream-bg);
       border-top: 1px solid var(--cream-line);
       border-bottom: 1px solid var(--cream-line);
     }
@@ -308,8 +300,8 @@
 
     .section-header p {
       margin: 0;
-      max-width: 700px;
-      color: var(--blue-main);
+      max-width: 710px;
+      color: var(--text-soft);
     }
 
     .section-kicker {
@@ -318,16 +310,12 @@
       letter-spacing: 0.15em;
       font-size: 0.72rem;
       font-weight: 900;
-      color: var(--blue-soft);
-    }
-
-    .cream .section-kicker {
-      color: #7a5a28;
+      color: var(--text-soft);
     }
 
     .card {
       background: var(--white);
-      border: 1px solid var(--baby-blue-line);
+      border: 1px solid var(--blue-line);
       border-radius: var(--radius);
       padding: 1.35rem;
       box-shadow: 0 18px 42px var(--shadow);
@@ -361,8 +349,6 @@
       gap: 1rem;
     }
 
-    /* PROFILE */
-
     .profile-card p {
       margin-bottom: 0;
     }
@@ -379,55 +365,70 @@
     }
 
     .snapshot-item {
-      background: var(--baby-blue);
-      border: 1px solid var(--baby-blue-line);
+      background: var(--blue-bg);
+      border: 1px solid var(--blue-line);
       border-radius: 18px;
       padding: 1rem;
     }
 
     .snapshot-item strong {
       display: block;
-      color: var(--blue-deep);
+      color: var(--text);
       font-size: 1.15rem;
       letter-spacing: -0.04em;
     }
 
     .snapshot-item span {
-      color: var(--blue-main);
+      color: var(--text-soft);
       font-size: 0.84rem;
     }
 
-    /* FOCUS */
-
-    .focus-card {
+    .focus-card,
+    .qualification-card,
+    .evidence-card,
+    .principle-card {
       min-height: 100%;
     }
 
-    .focus-number {
+    .focus-number,
+    .principle-number {
       display: inline-grid;
       place-items: center;
       width: 34px;
       height: 34px;
       border-radius: 50%;
       margin-bottom: 1rem;
-      background: var(--baby-blue);
-      border: 1px solid var(--baby-blue-line);
-      color: var(--blue-deep);
+      background: var(--blue-bg);
+      border: 1px solid var(--blue-line);
+      color: var(--text);
       font-size: 0.82rem;
       font-weight: 900;
     }
 
-    .focus-card ul {
+    .focus-card ul,
+    .qualification-card ul {
       margin: 1rem 0 0;
       padding-left: 1.1rem;
-      color: var(--blue-main);
+      color: var(--text-soft);
     }
 
-    .focus-card li {
+    .focus-card li,
+    .qualification-card li {
       margin-bottom: 0.32rem;
     }
 
-    /* EVIDENCE */
+    .tag {
+      display: inline-flex;
+      width: fit-content;
+      margin-bottom: 1rem;
+      padding: 0.34rem 0.62rem;
+      border-radius: 999px;
+      background: var(--cream-bg);
+      border: 1px solid var(--cream-line);
+      color: var(--text);
+      font-size: 0.75rem;
+      font-weight: 900;
+    }
 
     .evidence-card {
       min-height: 280px;
@@ -436,31 +437,18 @@
       justify-content: space-between;
     }
 
-    .evidence-label {
-      display: inline-flex;
-      width: fit-content;
-      margin-bottom: 1rem;
-      padding: 0.34rem 0.62rem;
-      border-radius: 999px;
-      background: var(--cream);
-      border: 1px solid var(--cream-line);
-      color: #7a5a28;
-      font-size: 0.75rem;
-      font-weight: 900;
-    }
-
     .file-name {
       margin-top: 0.85rem;
-      color: var(--blue-main);
+      color: var(--text-soft);
       font-size: 0.84rem;
     }
 
     code {
-      background: var(--baby-blue);
-      border: 1px solid var(--baby-blue-line);
+      background: var(--blue-bg);
+      border: 1px solid var(--blue-line);
       padding: 0.12rem 0.34rem;
       border-radius: 7px;
-      color: var(--blue-deep);
+      color: var(--text);
     }
 
     .file-row {
@@ -471,12 +459,12 @@
       justify-content: space-between;
       align-items: center;
       gap: 0.75rem;
-      color: var(--blue-main);
+      color: var(--text-soft);
       font-size: 0.84rem;
     }
 
     .file-row a {
-      color: #7a5a28;
+      color: var(--text);
       font-weight: 900;
     }
 
@@ -486,31 +474,17 @@
       border-radius: 18px;
       background: var(--white);
       border: 1px solid var(--cream-line);
-      color: var(--blue-main);
+      color: var(--text-soft);
       font-size: 0.93rem;
     }
 
-    /* APPROACH */
-
-    .principle-card span {
-      display: block;
-      margin-bottom: 0.55rem;
-      color: var(--blue-soft);
-      font-size: 0.82rem;
-      font-weight: 900;
-    }
-
-    /* CONFIDENTIALITY */
-
     .privacy-card {
-      border-left: 5px solid var(--blue-deep);
+      border-left: 5px solid var(--text);
     }
 
     .privacy-card p + p {
       margin-top: 1rem;
     }
-
-    /* CONTACT */
 
     .contact-list {
       display: grid;
@@ -523,20 +497,18 @@
       justify-content: space-between;
       gap: 1rem;
       padding-top: 0.75rem;
-      border-top: 1px solid var(--baby-blue-line);
-      color: var(--blue-main);
+      border-top: 1px solid var(--blue-line);
+      color: var(--text-soft);
     }
 
     .contact-row strong {
-      color: var(--blue-deep);
+      color: var(--text);
     }
 
     .contact-row a {
-      color: var(--blue-deep);
+      color: var(--text);
       font-weight: 900;
     }
-
-    /* TRANSITIONS */
 
     .reveal {
       opacity: 0;
@@ -563,10 +535,10 @@
 
     .footer {
       background: var(--white);
-      border-top: 1px solid var(--baby-blue-line);
+      border-top: 1px solid var(--blue-line);
       padding: 2rem 1.25rem;
       text-align: center;
-      color: var(--blue-main);
+      color: var(--text-soft);
       font-size: 0.9rem;
     }
 
@@ -633,6 +605,7 @@
         <div class="nav-links">
           <a href="#profile">Profile</a>
           <a href="#focus">Focus</a>
+          <a href="#qualifications">Qualifications</a>
           <a href="#evidence">Evidence</a>
           <a href="#approach">Approach</a>
           <a href="#contact">Contact</a>
@@ -646,11 +619,12 @@
           <div class="reveal">
             <p class="kicker">Professional portfolio</p>
 
-            <h1>Mathematics teaching, assessment and data-informed education</h1>
+            <h1>Mathematics teaching, curriculum design and assessment practice</h1>
 
             <p class="hero-text">
-              A concise, anonymised portfolio presenting my work across A-Level mathematics teaching,
-              principal examiner responsibilities, assessment creation and data-informed curriculum support.
+              A concise, anonymised portfolio presenting my work as a qualified mathematics teacher,
+              principal examiner, assessment creator and data-informed educator, with experience across
+              UK, international and online learning contexts.
             </p>
 
             <div class="hero-actions">
@@ -661,24 +635,24 @@
 
           <aside class="hero-card reveal delay-1">
             <p>
-              This portfolio is designed to sit alongside my CV and give a clearer view of the
-              professional work behind it.
+              This portfolio is designed to sit alongside my CV and give a clearer view of the professional
+              practice behind it.
             </p>
 
             <div class="hero-list">
               <div class="hero-item">
-                <strong>A-Level Mathematics</strong>
-                <span>Teaching, tutoring, exam preparation and learner support</span>
+                <strong>Qualified Mathematics Teacher</strong>
+                <span>PGCE with QTS, BSc Mathematics and KS3–KS5 teaching experience</span>
               </div>
 
               <div class="hero-item">
-                <strong>Assessment Leadership</strong>
-                <span>Principal examiner work, standards and mark scheme quality</span>
+                <strong>Assessment & Curriculum</strong>
+                <span>Principal examiner work, mark schemes, resources and curriculum planning</span>
               </div>
 
               <div class="hero-item">
-                <strong>Data-informed Practice</strong>
-                <span>Using evidence, progress data and analysis to support decisions</span>
+                <strong>Data, AI & International Pathways</strong>
+                <span>IB, SAT, AP, GCSE, IGCSE, A-Level and AI-informed education practice</span>
               </div>
             </div>
           </aside>
@@ -694,29 +668,39 @@
             </div>
 
             <p>
-              A focused introduction to my work as a mathematics educator, assessment professional
-              and data-informed practitioner.
+              A focused introduction to my work across mathematics teaching, curriculum development,
+              assessment design, data-informed planning and AI-informed education.
             </p>
           </div>
 
           <div class="card profile-card">
             <p>
-              I work across mathematics teaching, tutoring, assessment design and examiner-style
-              quality assurance. My practice is built around clear explanation, careful sequencing,
-              purposeful feedback and a strong understanding of how students prepare for examinations.
+              I am a qualified mathematics teacher with PGCE and QTS, supported by a BSc (Hons)
+              in Mathematics. My experience spans classroom teaching, online provision, private tutoring,
+              curriculum development, assessment design and examiner-style quality assurance.
             </p>
 
             <p>
-              Alongside teaching, I bring a data-aware approach to education. I have experience using
-              analytical tools and progress information to identify patterns, support planning and
-              communicate findings clearly. This helps me connect classroom practice, assessment design
-              and learner progress in a more informed way.
+              My work is centred on making mathematics clear, purposeful and academically rigorous. I focus
+              on carefully sequenced explanations, precise modelling, meaningful practice and feedback that
+              helps students understand what to improve next.
+            </p>
+
+            <p>
+              Alongside teaching and assessment, I bring a data-aware and AI-informed approach to education.
+              I am interested in how learner progress data, digital tools and responsible AI practice can support
+              better planning, clearer feedback and more targeted academic intervention.
             </p>
 
             <div class="snapshot">
               <div class="snapshot-item">
-                <strong>A-Level</strong>
-                <span>Mathematics teaching and support</span>
+                <strong>PGCE + QTS</strong>
+                <span>Secondary Mathematics</span>
+              </div>
+
+              <div class="snapshot-item">
+                <strong>BSc Mathematics</strong>
+                <span>Mathematical subject knowledge</span>
               </div>
 
               <div class="snapshot-item">
@@ -725,13 +709,8 @@
               </div>
 
               <div class="snapshot-item">
-                <strong>Assessment</strong>
-                <span>Question design and mark schemes</span>
-              </div>
-
-              <div class="snapshot-item">
-                <strong>Data</strong>
-                <span>Analysis, reporting and insight</span>
+                <strong>Data + AI</strong>
+                <span>Insight, reporting and education technology</span>
               </div>
             </div>
           </div>
@@ -747,23 +726,23 @@
             </div>
 
             <p>
-              The portfolio is organised around four main branches of professional practice.
+              The portfolio is organised around the main branches of my professional practice.
             </p>
           </div>
 
           <div class="grid-4">
             <article class="card focus-card reveal delay-1">
               <div class="focus-number">01</div>
-              <h3>A-Level Mathematics Teacher</h3>
+              <h3>Mathematics Teacher</h3>
               <p>
-                Teaching and supporting students through advanced mathematical content,
-                examination preparation and structured problem-solving.
+                Teaching mathematics across secondary and post-16 pathways, with a focus on fluency,
+                reasoning, problem-solving and examination preparation.
               </p>
               <ul>
+                <li>KS3–KS5 Mathematics</li>
+                <li>GCSE and IGCSE</li>
                 <li>A-Level Mathematics</li>
-                <li>GCSE / IGCSE transition</li>
-                <li>Exam technique</li>
-                <li>Reasoning and fluency</li>
+                <li>Classroom and online delivery</li>
               </ul>
             </article>
 
@@ -771,14 +750,14 @@
               <div class="focus-number">02</div>
               <h3>Principal Examiner</h3>
               <p>
-                Assessment work focused on standards, consistency, mark scheme clarity
-                and the quality of examiner guidance.
+                Assessment work focused on standards, consistency, mark scheme quality and clear
+                examiner guidance.
               </p>
               <ul>
+                <li>Assessment quality assurance</li>
+                <li>Mark scheme review</li>
                 <li>Standardisation</li>
-                <li>Marking judgement</li>
-                <li>Candidate performance</li>
-                <li>Assessment quality</li>
+                <li>Candidate performance analysis</li>
               </ul>
             </article>
 
@@ -786,29 +765,91 @@
               <div class="focus-number">03</div>
               <h3>Assessment Creator</h3>
               <p>
-                Designing mathematical tasks, practice papers, mark schemes and resources
-                that build confidence and reveal understanding.
+                Designing questions, worksheets, practice papers and mark schemes that reveal understanding
+                and support progress.
               </p>
               <ul>
                 <li>Question writing</li>
-                <li>Mark schemes</li>
                 <li>Progressive challenge</li>
-                <li>Clear layout</li>
+                <li>Exam-style resources</li>
+                <li>Accessible layouts</li>
               </ul>
             </article>
 
             <article class="card focus-card reveal delay-2">
               <div class="focus-number">04</div>
-              <h3>Data-informed Educator</h3>
+              <h3>Curriculum & Data</h3>
               <p>
-                Bringing analytical thinking into education through learner data,
-                reporting, progress monitoring and evidence-based planning.
+                Supporting curriculum planning and learner progress through structured resources,
+                data analysis and evidence-informed academic support.
               </p>
               <ul>
+                <li>Curriculum sequencing</li>
+                <li>Progress monitoring</li>
                 <li>Python, SQL and Excel</li>
                 <li>Power BI and Tableau</li>
-                <li>Progress tracking</li>
-                <li>Clear reporting</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="qualifications" class="section white reveal">
+        <div class="section-inner">
+          <div class="section-header">
+            <div>
+              <p class="section-kicker">Academic profile</p>
+              <h2>Qualifications, pathways and specialist interests</h2>
+            </div>
+
+            <p>
+              This section gives employers a quick view of the academic and professional background
+              behind the evidence.
+            </p>
+          </div>
+
+          <div class="grid-3">
+            <article class="card qualification-card reveal delay-1">
+              <span class="tag">Teaching</span>
+              <h3>Qualified mathematics teacher</h3>
+              <p>
+                PGCE with QTS in Secondary Mathematics, supported by a BSc (Hons) Mathematics degree.
+              </p>
+              <ul>
+                <li>Secondary Mathematics</li>
+                <li>KS3–KS5 teaching</li>
+                <li>Classroom practice</li>
+                <li>Subject-specific pedagogy</li>
+              </ul>
+            </article>
+
+            <article class="card qualification-card reveal delay-1">
+              <span class="tag">International pathways</span>
+              <h3>GCSE, IGCSE, IB, AP and SAT</h3>
+              <p>
+                Experience supporting learners across UK and international mathematics pathways, including
+                exam preparation and topic-specific intervention.
+              </p>
+              <ul>
+                <li>GCSE and IGCSE</li>
+                <li>A-Level Mathematics</li>
+                <li>IB Mathematics support</li>
+                <li>AP and SAT Mathematics</li>
+              </ul>
+            </article>
+
+            <article class="card qualification-card reveal delay-2">
+              <span class="tag">AI and digital learning</span>
+              <h3>AI-informed education practice</h3>
+              <p>
+                Professional development in generative AI for educators, with interest in responsible AI use
+                for feedback, planning, resource design and reflective teaching practice.
+              </p>
+              <ul>
+                <li>Generative AI for Educators</li>
+                <li>Reflective AI practice</li>
+                <li>Digital learning resources</li>
+                <li>Responsible classroom use</li>
               </ul>
             </article>
           </div>
@@ -825,18 +866,18 @@
 
             <p>
               This section is prepared for anonymised documents. Each card can later link to a PDF,
-              worksheet, assessment sample, reflection, data summary or CV document.
+              worksheet, assessment sample, curriculum note, data summary or CV document.
             </p>
           </div>
 
           <div class="grid-3">
             <article class="card evidence-card reveal delay-1">
               <div>
-                <span class="evidence-label">Teaching</span>
+                <span class="tag">Teaching</span>
                 <h3>A-Level lesson sample</h3>
                 <p>
-                  Space for an anonymised A-Level mathematics lesson plan, worked example
-                  sequence or classroom resource.
+                  Space for an anonymised A-Level mathematics lesson plan, worked example sequence
+                  or classroom resource.
                 </p>
                 <div class="file-name">Suggested file: <code>a-level-lesson-sample.pdf</code></div>
               </div>
@@ -849,13 +890,12 @@
 
             <article class="card evidence-card reveal delay-1">
               <div>
-                <span class="evidence-label">Assessment</span>
-                <h3>Assessment design sample</h3>
+                <span class="tag">Curriculum</span>
+                <h3>Curriculum sequencing sample</h3>
                 <p>
-                  Space for a self-created assessment, worksheet or practice paper showing
-                  progression and mathematical precision.
+                  Space for an anonymised curriculum map, scheme of work extract or topic sequencing reflection.
                 </p>
-                <div class="file-name">Suggested file: <code>assessment-design.pdf</code></div>
+                <div class="file-name">Suggested file: <code>curriculum-sequencing.pdf</code></div>
               </div>
 
               <div class="file-row">
@@ -866,7 +906,24 @@
 
             <article class="card evidence-card reveal delay-2">
               <div>
-                <span class="evidence-label">Marking</span>
+                <span class="tag">Assessment</span>
+                <h3>Assessment design sample</h3>
+                <p>
+                  Space for a self-created assessment, worksheet or practice paper showing progression,
+                  precision and exam-style structure.
+                </p>
+                <div class="file-name">Suggested file: <code>assessment-design.pdf</code></div>
+              </div>
+
+              <div class="file-row">
+                <span>No file linked yet</span>
+                <a href="#">Add later</a>
+              </div>
+            </article>
+
+            <article class="card evidence-card reveal delay-1">
+              <div>
+                <span class="tag">Marking</span>
                 <h3>Mark scheme sample</h3>
                 <p>
                   Space for a self-created mark scheme showing method marks, accuracy marks,
@@ -883,27 +940,10 @@
 
             <article class="card evidence-card reveal delay-1">
               <div>
-                <span class="evidence-label">Examiner Role</span>
-                <h3>Assessment quality reflection</h3>
-                <p>
-                  Space for an anonymised reflection on assessment standards, consistency,
-                  examiner guidance and candidate performance.
-                </p>
-                <div class="file-name">Suggested file: <code>assessment-quality-reflection.pdf</code></div>
-              </div>
-
-              <div class="file-row">
-                <span>No file linked yet</span>
-                <a href="#">Add later</a>
-              </div>
-            </article>
-
-            <article class="card evidence-card reveal delay-1">
-              <div>
-                <span class="evidence-label">Data</span>
+                <span class="tag">Data</span>
                 <h3>Data-informed planning example</h3>
                 <p>
-                  Space for an anonymised example showing how data, learner progress or
+                  Space for an anonymised example showing how progress data, assessment outcomes or
                   performance trends informed planning.
                 </p>
                 <div class="file-name">Suggested file: <code>data-informed-planning.pdf</code></div>
@@ -917,12 +957,13 @@
 
             <article class="card evidence-card reveal delay-2">
               <div>
-                <span class="evidence-label">CV</span>
-                <h3>Professional CV</h3>
+                <span class="tag">AI</span>
+                <h3>AI-informed resource design</h3>
                 <p>
-                  Space to link the current CV that this online portfolio is designed to support.
+                  Space for a reflection or example showing responsible use of AI to support planning,
+                  feedback, differentiation or resource creation.
                 </p>
-                <div class="file-name">Suggested file: <code>cv.pdf</code></div>
+                <div class="file-name">Suggested file: <code>ai-informed-practice.pdf</code></div>
               </div>
 
               <div class="file-row">
@@ -948,34 +989,35 @@
             </div>
 
             <p>
-              The same principles run through my teaching, tutoring, assessment work and data-informed planning.
+              The same principles run through my teaching, tutoring, assessment work, curriculum design
+              and data-informed planning.
             </p>
           </div>
 
           <div class="grid-3">
             <article class="card principle-card reveal delay-1">
-              <span>01</span>
-              <h3>Clarity first</h3>
+              <div class="principle-number">01</div>
+              <h3>Clarity before complexity</h3>
               <p>
-                I aim to make mathematical ideas feel structured and accessible through
-                precise explanation, clean modelling and carefully chosen examples.
+                I aim to make mathematical ideas feel structured and accessible through precise explanation,
+                clean modelling and carefully chosen examples.
               </p>
             </article>
 
             <article class="card principle-card reveal delay-1">
-              <span>02</span>
-              <h3>Assessment with purpose</h3>
+              <div class="principle-number">02</div>
+              <h3>Assessment that reveals thinking</h3>
               <p>
-                I see assessment as more than checking answers. Good questions reveal
-                thinking, misconceptions and the next steps for learning.
+                Good assessment should do more than check answers. It should reveal misconceptions,
+                reasoning, confidence and the next steps for learning.
               </p>
             </article>
 
             <article class="card principle-card reveal delay-2">
-              <span>03</span>
+              <div class="principle-number">03</div>
               <h3>Evidence before assumption</h3>
               <p>
-                Whether using learner responses, assessment outcomes or progress data,
+                Whether using student responses, assessment outcomes, progress data or AI-supported reflection,
                 I try to make decisions from evidence rather than guesswork.
               </p>
             </article>
@@ -992,21 +1034,21 @@
             </div>
 
             <p>
-              This statement keeps the portfolio professional and reassures employers that
-              confidentiality has been considered carefully.
+              This statement keeps the portfolio professional and reassures employers that confidentiality
+              has been considered carefully.
             </p>
           </div>
 
           <div class="card privacy-card">
             <p>
-              This portfolio is intentionally anonymised. It does not include student names,
-              school names, company names, confidential assessment material, internal documents,
-              identifiable student work, logos or private data.
+              This portfolio is intentionally anonymised. It does not include student names, school names,
+              company names, confidential assessment material, internal documents, identifiable student work,
+              logos or private data.
             </p>
 
             <p>
-              Evidence is selected to demonstrate professional practice while respecting
-              safeguarding, confidentiality and assessment integrity.
+              Evidence is selected to demonstrate professional practice while respecting safeguarding,
+              confidentiality and assessment integrity.
             </p>
           </div>
         </div>
@@ -1021,14 +1063,14 @@
             </div>
 
             <p>
-              Replace the placeholders below when you are ready to publish the final version.
+              Replace or remove any details before publishing if you prefer the portfolio to stay more private.
             </p>
           </div>
 
           <div class="card contact-card">
             <p>
-              This portfolio is designed to sit alongside my CV and provide selected evidence
-              of my work in mathematics teaching, assessment design and data-informed education.
+              This portfolio is designed to sit alongside my CV and provide selected evidence of my work in
+              mathematics teaching, curriculum development, assessment design and data-informed education.
             </p>
 
             <div class="contact-list">
