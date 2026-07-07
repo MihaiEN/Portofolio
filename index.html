@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Mihai N. | Mathematics Teacher Portfolio</title>
+
+  <meta 
+    name="description" 
+    content="Anonymised professional mathematics teaching portfolio showcasing teaching, tutoring, assessment creation and examiner-style experience." 
+  />
+
+  <style>
+    :root {
+      --white: #ffffff;
+      --cream: #fff7e8;
+      --cream-deep: #f2dfbd;
+      --baby-blue: #dff3ff;
+      --baby-blue-strong: #b9e6ff;
+      --accent: #2c98dd;
+      --accent-dark: #145f9b;
+      --text: #182235;
+      --muted: #607086;
+      --card-border: rgba(44, 152, 221, 0.18);
+      --shadow: rgba(31, 74, 112, 0.12);
+      --max-width: 1120px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      line-height: 1.6;
+      background:
+        radial-gradient(circle at top left, rgba(185, 230, 255, 0.9), transparent 34rem),
+        radial-gradient(circle at top right, rgba(255, 247, 232, 1), transparent 32rem),
+        linear-gradient(180deg, #ffffff 0%, #f8fcff 45%, #fff7e8 100%);
+    }
+
+    a {
+      color: var(--accent-dark);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(255, 255, 255, 0.84);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(44, 152, 221, 0.14);
+    }
+
+    .nav {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 1rem 1.25rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .logo {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--baby-blue), var(--cream));
+      border: 1px solid rgba(44, 152, 221, 0.3);
+      display: grid;
+      place-items: center;
+      font-weight: 800;
+      color: var(--accent-dark);
+      box-shadow: 0 10px 24px rgba(44, 152, 221, 0.12);
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent-dark);
+    }
+
+    .hero {
+      min-height: 82vh;
+      display: flex;
+      align-items: center;
+      padding: 6rem 1.25rem 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 520px;
+      height: 520px;
+      right: -160px;
+      top: 90px;
+      background: radial-gradient(circle, rgba(185, 230, 255, 0.9), transparent 70%);
+      z-index: -1;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 430px;
+      height: 430px;
+      left: -130px;
+      bottom: -160px;
+      background: radial-gradient(circle, rgba(242, 223, 189, 0.85), transparent 70%);
+      z-index: -1;
+    }
+
+    .hero-content,
+    .section {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .eyebrow {
+      color: var(--accent-dark);
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-size: 0.75rem;
+      font-weight: 800;
+      margin: 0 0 0.7rem;
+    }
+
+    h1,
+    h2,
+    h3 {
+      margin-top: 0;
+      line-height: 1.12;
+    }
+
+    h1 {
+      max-width: 930px;
+      font-size: clamp(2.5rem, 7vw, 5.2rem);
+      letter-spacing: -0.07em;
+      margin-bottom: 1.2rem;
+    }
+
+    h2 {
+      font-size: clamp(2rem, 4vw, 3.1rem);
+      letter-spacing: -0.045em;
+      margin-bottom: 0;
+    }
+
+    h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .hero-text {
+      max-width: 760px;
+      color: var(--muted);
+      font-size: 1.16rem;
+      margin-bottom: 2rem;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.88rem 1.18rem;
+      border-radius: 999px;
+      font-weight: 800;
+      border: 1px solid transparent;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      text-decoration: none;
+    }
+
+    .btn.primary {
+      background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+      color: white;
+      box-shadow: 0 14px 30px rgba(44, 152, 221, 0.24);
+    }
+
+    .btn.secondary {
+      background: rgba(255, 255, 255, 0.86);
+      color: var(--accent-dark);
+      border-color: rgba(44, 152, 221, 0.24);
+      box-shadow: 0 10px 24px rgba(31, 74, 112, 0.08);
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+    }
+
+    .tags span {
+      background: rgba(255, 255, 255, 0.82);
+      border: 1px solid rgba(44, 152, 221, 0.18);
+      color: var(--muted);
+      padding: 0.58rem 0.78rem;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      box-shadow: 0 8px 20px rgba(31, 74, 112, 0.06);
+    }
+
+    .section {
+      padding: 4.5rem 1.25rem;
+    }
+
+    .section-heading {
+      margin-bottom: 1.5rem;
+    }
+
+    .section-intro {
+      max-width: 760px;
+      color: var(--muted);
+      margin-bottom: 1.5rem;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.88);
+      border: 1px solid var(--card-border);
+      border-radius: 26px;
+      padding: 1.55rem;
+      box-shadow: 0 24px 60px var(--shadow);
+    }
+
+    .card p {
+      color: var(--muted);
+    }
+
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.2rem;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.2rem;
+    }
+
+    .role-card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.96), rgba(255,247,232,0.7));
+    }
+
+    .role-card ul {
+      color: var(--muted);
+      padding-left: 1.1rem;
+      margin-bottom: 0;
+    }
+
+    .role-card li {
+      margin-bottom: 0.35rem;
+    }
+
+    .evidence-card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.96), rgba(223,243,255,0.55));
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .evidence-label {
+      display: inline-flex;
+      width: fit-content;
+      padding: 0.38rem 0.68rem;
+      border-radius: 999px;
+      background: rgba(223, 243, 255, 0.92);
+      color: var(--accent-dark);
+      border: 1px solid rgba(44, 152, 221, 0.18);
+      font-size: 0.78rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+    }
+
+    .principles {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .principles div {
+      border: 1px solid rgba(44, 152, 221, 0.16);
+      border-radius: 20px;
+      padding: 1rem;
+      background: linear-gradient(135deg, rgba(223,243,255,0.65), rgba(255,247,232,0.85));
+    }
+
+    .notice {
+      background: linear-gradient(135deg, rgba(255,247,232,0.95), rgba(223,243,255,0.68));
+      border-left: 5px solid var(--accent);
+    }
+
+    .contact-card {
+      max-width: 790px;
+      background: linear-gradient(135deg, rgba(255,255,255,0.96), rgba(255,247,232,0.8));
+    }
+
+    .footer {
+      text-align: center;
+      color: var(--muted);
+      padding: 2rem 1.25rem;
+      border-top: 1px solid rgba(44, 152, 221, 0.14);
+      background: rgba(255, 255, 255, 0.6);
+    }
+
+    @media (max-width: 980px) {
+      .grid-4,
+      .grid-3,
+      .principles {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav-links {
+        gap: 0.75rem;
+      }
+
+      .hero {
+        min-height: auto;
+        padding-top: 4rem;
+      }
+
+      h1 {
+        letter-spacing: -0.045em;
+      }
+
+      .grid-4,
+      .grid-3,
+      .principles {
+        grid-template-columns: 1fr;
+      }
+
+      .card {
+        padding: 1.25rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="header">
+    <nav class="nav">
+      <a href="#" class="logo">MN</a>
+
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#roles">Roles</a>
+        <a href="#evidence">Evidence</a>
+        <a href="#approach">Approach</a>
+        <a href="#privacy">Anonymisation</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">Mathematics Teacher Portfolio</p>
+
+        <h1>Professional evidence of teaching, tutoring and assessment practice</h1>
+
+        <p class="hero-text">
+          An anonymised portfolio showcasing my work across mathematics teaching,
+          private tutoring, assessment creation and examiner-style academic responsibilities.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#evidence" class="btn primary">View Evidence</a>
+          <a href="#roles" class="btn secondary">Explore My Roles</a>
+        </div>
+
+        <div class="tags">
+          <span>KS3–KS5 Mathematics</span>
+          <span>GCSE / IGCSE</span>
+          <span>A Level</span>
+          <span>Assessment Design</span>
+          <span>Private Tutoring</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="section-heading">
+        <p class="eyebrow">About</p>
+        <h2>Professional profile</h2>
+      </div>
+
+      <div class="card">
+        <p>
+          I am a mathematics educator with experience across classroom teaching,
+          private tutoring, assessment creation and examiner-style work. My practice
+          focuses on clear explanations, structured modelling, purposeful questioning
+          and feedback that helps students understand exactly how to improve.
+        </p>
+
+        <p>
+          This portfolio has been created to accompany my CV. It provides selected
+          evidence of my professional practice while protecting student, school,
+          organisation and assessment confidentiality.
+        </p>
+      </div>
+    </section>
+
+    <section id="roles" class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Experience</p>
+        <h2>Professional roles</h2>
+      </div>
+
+      <div class="grid-4">
+        <article class="card role-card">
+          <h3>Mathematics Teacher</h3>
+          <p>
+            Planned and delivered mathematics lessons across secondary year groups,
+            using modelling, guided practice and responsive questioning to support
+            student understanding.
+          </p>
+          <ul>
+            <li>KS3–KS5 mathematics teaching</li>
+            <li>Lesson planning and sequencing</li>
+            <li>Classroom routines and behaviour support</li>
+            <li>Support for lower-attaining and SEND learners</li>
+          </ul>
+        </article>
+
+        <article class="card role-card">
+          <h3>Private Mathematics Tutor</h3>
+          <p>
+            Delivered personalised mathematics tuition, supporting students preparing
+            for GCSE, IGCSE, A Level and other mathematics pathways.
+          </p>
+          <ul>
+            <li>Diagnostic questioning</li>
+            <li>Topic gap analysis</li>
+            <li>Exam technique support</li>
+            <li>Personalised feedback</li>
+          </ul>
+        </article>
+
+        <article class="card role-card">
+          <h3>Assessment Creator</h3>
+          <p>
+            Created mathematics questions, worksheets, practice papers and mark schemes
+            designed to build fluency, reasoning and exam confidence.
+          </p>
+          <ul>
+            <li>Question writing</li>
+            <li>Mark scheme creation</li>
+            <li>Progressive difficulty design</li>
+            <li>Accessible formatting</li>
+          </ul>
+        </article>
+
+        <article class="card role-card">
+          <h3>Principal Examiner / Assessment Role</h3>
+          <p>
+            Developed examiner-style experience involving marking standards,
+            professional judgement, assessment quality and confidentiality.
+          </p>
+          <ul>
+            <li>Assessment standardisation</li>
+            <li>Quality assurance thinking</li>
+            <li>Common error analysis</li>
+            <li>Professional confidentiality</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="evidence" class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Evidence</p>
+        <h2>Evidence library</h2>
+      </div>
+
+      <p class="section-intro">
+        This section will later contain selected anonymised PDFs, lesson examples,
+        worksheets, assessment samples, reflections and CV materials.
+      </p>
+
+      <div class="grid-3">
+        <article class="card evidence-card">
+          <div>
+            <span class="evidence-label">Teaching Evidence</span>
+            <h3>Lesson Planning Example</h3>
+            <p>
+              A sample lesson planning document showing objectives, modelling,
+              guided practice, questioning and student support.
+            </p>
+          </div>
+          <a class="btn secondary" href="#">Coming Soon</a>
+        </article>
+
+        <article class="card evidence-card">
+          <div>
+            <span class="evidence-label">Assessment Creation</span>
+            <h3>Assessment Design Sample</h3>
+            <p>
+              A self-created assessment sample showing question sequencing,
+              marks, command words and mark scheme thinking.
+            </p>
+          </div>
+          <a class="btn secondary" href="#">Coming Soon</a>
+        </article>
+
+        <article class="card evidence-card">
+          <div>
+            <span class="evidence-label">Tutoring Evidence</span>
+            <h3>Tutoring Progress Reflection</h3>
+            <p>
+              An anonymised reflection showing how diagnostic questioning and
+              targeted practice supported student progress.
+            </p>
+          </div>
+          <a class="btn secondary" href="#">Coming Soon</a>
+        </article>
+
+        <article class="card evidence-card">
+          <div>
+            <span class="evidence-label">Assessment Practice</span>
+            <h3>Examiner-Style Commentary</h3>
+            <p>
+              A professional commentary showing understanding of mark schemes,
+              common errors and consistent judgement.
+            </p>
+          </div>
+          <a class="btn secondary" href="#">Coming Soon</a>
+        </article>
+
+        <article class="card evidence-card">
+          <div>
+            <span class="evidence-label">Curriculum</span>
+            <h3>Curriculum Sequencing Reflection</h3>
+            <p>
+              A reflection explaining how mathematical topics can be sequenced
+              to build fluency, confidence and reasoning.
+            </p>
+          </div>
+          <a class="btn secondary" href="#">Coming Soon</a>
+        </article>
+
+        <article class="card evidence-card">
+          <div>
+            <span class="evidence-label">CV</span>
+            <h3>Professional CV</h3>
+            <p>
+              A current CV summarising teaching, tutoring, assessment and wider
+              professional experience.
+            </p>
+          </div>
+          <a class="btn secondary" href="#">Coming Soon</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="approach" class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Teaching Approach</p>
+        <h2>How I teach mathematics</h2>
+      </div>
+
+      <div class="card">
+        <p>
+          My teaching approach is based on clarity, structure and confidence.
+          I believe students learn mathematics best when ideas are broken down
+          carefully, modelled clearly, practised deliberately and revisited over time.
+        </p>
+
+        <p>
+          I aim to help students understand not only how to complete a method,
+          but why it works, how it connects to previous learning and how it can
+          be applied in unfamiliar exam-style problems.
+        </p>
+
+        <div class="principles">
+          <div>
+            <h3>Clarity</h3>
+            <p>Clear explanations, clean examples and careful modelling.</p>
+          </div>
+
+          <div>
+            <h3>Challenge</h3>
+            <p>Tasks that move students from fluency to reasoning.</p>
+          </div>
+
+          <div>
+            <h3>Feedback</h3>
+            <p>Precise feedback that helps students improve their next attempt.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="privacy" class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Professional Standards</p>
+        <h2>Anonymisation and confidentiality</h2>
+      </div>
+
+      <div class="card notice">
+        <p>
+          This portfolio is intentionally anonymised. It does not include student
+          names, school names, company names, confidential assessment material,
+          internal documents, identifiable student work, logos or private data.
+        </p>
+
+        <p>
+          Evidence is selected to demonstrate professional practice while respecting
+          safeguarding, confidentiality and assessment integrity.
+        </p>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Contact</p>
+        <h2>CV and contact</h2>
+      </div>
+
+      <div class="card contact-card">
+        <p>
+          This portfolio is designed to support my CV and provide selected evidence
+          of my professional work in mathematics education.
+        </p>
+
+        <p>
+          Email: <a href="mailto:your-email@example.com">your-email@example.com</a>
+        </p>
+
+        <p>
+          LinkedIn: <a href="#" target="_blank">Add LinkedIn profile</a>
+        </p>
+
+        <p>
+          CV: <a href="#" target="_blank">CV to be uploaded</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 Mihai N. Anonymised professional teaching portfolio.</p>
+  </footer>
+</body>
+</html>
