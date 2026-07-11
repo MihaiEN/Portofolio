@@ -5,11 +5,9 @@
   --soft-ink: #3a3a3a;
   --faded-black: #181818;
   --line: #d8d8d8;
-  --line-dark: #242424;
   --off-white: #fafafa;
   --soft-panel: #f6f6f6;
   --shadow: rgba(0, 0, 0, 0.08);
-  --shadow-strong: rgba(0, 0, 0, 0.16);
   --max-width: 1180px;
   --transition: 220ms ease;
 }
@@ -150,7 +148,6 @@ svg {
 .brand-text strong {
   font-size: 0.94rem;
   font-weight: 900;
-  letter-spacing: -0.01em;
 }
 
 .brand-text span {
@@ -199,7 +196,7 @@ svg {
   margin: 5px 0;
 }
 
-/* Global layout */
+/* Layout */
 
 .section-inner {
   max-width: var(--max-width);
@@ -215,8 +212,6 @@ svg {
 .section-black {
   background: linear-gradient(180deg, var(--black), var(--faded-black));
   color: var(--white);
-  border-top: 1px solid var(--black);
-  border-bottom: 1px solid var(--black);
 }
 
 .section-black p,
@@ -249,13 +244,38 @@ svg {
   overflow: hidden;
 }
 
-.hero::after {
-  content: "";
+.formula-marquee {
   position: absolute;
-  inset: auto 0 0 0;
-  height: 120px;
-  background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.035));
+  left: 0;
+  right: 0;
+  top: 2.5rem;
+  overflow: hidden;
+  opacity: 0.055;
   pointer-events: none;
+}
+
+.formula-track {
+  display: flex;
+  width: max-content;
+  gap: 4rem;
+  animation: formulaMove 34s linear infinite;
+}
+
+.formula-track span {
+  color: var(--black);
+  font-size: clamp(2rem, 5vw, 5rem);
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+@keyframes formulaMove {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 .hero-grid {
@@ -265,67 +285,6 @@ svg {
   grid-template-columns: minmax(0, 1.05fr) minmax(300px, 0.95fr);
   gap: 4.2rem;
   align-items: center;
-}
-
-.floating-equations {
-  position: absolute;
-  inset: 0;
-  overflow: hidden;
-  pointer-events: none;
-  user-select: none;
-}
-
-.floating-equations span {
-  position: absolute;
-  color: var(--black);
-  opacity: 0.045;
-  font-weight: 900;
-  line-height: 1;
-  animation: floatEquation 13s ease-in-out infinite alternate;
-}
-
-.floating-equations span:nth-child(1) {
-  left: 5%;
-  top: 18%;
-  font-size: 8rem;
-}
-
-.floating-equations span:nth-child(2) {
-  right: 8%;
-  top: 12%;
-  font-size: 4.6rem;
-  animation-delay: 1.2s;
-}
-
-.floating-equations span:nth-child(3) {
-  left: 42%;
-  bottom: 10%;
-  font-size: 6rem;
-  animation-delay: 2s;
-}
-
-.floating-equations span:nth-child(4) {
-  right: 26%;
-  bottom: 18%;
-  font-size: 5rem;
-  animation-delay: 0.5s;
-}
-
-.floating-equations span:nth-child(5) {
-  left: 18%;
-  bottom: 26%;
-  font-size: 4rem;
-  animation-delay: 1.7s;
-}
-
-@keyframes floatEquation {
-  from {
-    transform: translateY(0) rotate(0deg);
-  }
-
-  to {
-    transform: translateY(-18px) rotate(-2deg);
-  }
 }
 
 .eyebrow {
@@ -550,9 +509,9 @@ p {
 }
 
 .draw-line {
-  stroke-dasharray: 700;
-  stroke-dashoffset: 700;
-  animation: drawLine 1800ms ease forwards;
+  stroke-dasharray: 900;
+  stroke-dashoffset: 900;
+  animation: drawLine 1900ms ease forwards;
 }
 
 @keyframes drawLine {
@@ -652,7 +611,7 @@ p {
 }
 
 .text-column p::first-letter {
-  font-size: 1.4em;
+  font-size: 1.35em;
   font-weight: 900;
   color: var(--black);
 }
@@ -760,7 +719,7 @@ p {
   margin-bottom: 0;
 }
 
-/* Math decorations */
+/* Math decoration */
 
 .math-watermark {
   position: absolute;
@@ -803,7 +762,7 @@ p {
   background: var(--white);
   padding: 1.1rem;
   display: grid;
-  grid-template-columns: 230px minmax(0, 1fr);
+  grid-template-columns: 240px minmax(0, 1fr);
   gap: 1rem;
   align-items: center;
 }
@@ -855,11 +814,12 @@ p {
 .principles article {
   padding: 1.25rem;
   border-right: 1px solid var(--line);
-  transition: background var(--transition);
+  transition: background var(--transition), transform var(--transition);
 }
 
 .principles article:hover {
   background: var(--soft-panel);
+  transform: translateY(-3px);
 }
 
 .principles article:last-child {
@@ -878,7 +838,7 @@ p {
 
 .credentials-layout {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 300px;
+  grid-template-columns: minmax(0, 1fr) 320px;
   gap: 2rem;
   align-items: center;
 }
@@ -914,22 +874,37 @@ p {
   color: #f1f1f1;
 }
 
-.geometry-diagram {
+.unit-circle {
   width: 100%;
-  opacity: 0.9;
+  opacity: 0.92;
 }
 
-.geometry-diagram circle,
-.geometry-diagram polygon,
-.geometry-diagram line {
+.unit-circle circle,
+.unit-circle line,
+.unit-circle path {
   fill: none;
   stroke: var(--white);
   stroke-width: 2;
 }
 
-.geometry-diagram text {
+.unit-circle .projection {
+  stroke-dasharray: 5 5;
+  opacity: 0.75;
+}
+
+.unit-circle .angle-arc {
+  stroke-width: 1.8;
+}
+
+.unit-circle .circle-point {
+  fill: var(--black);
+  stroke: var(--white);
+  stroke-width: 2;
+}
+
+.unit-circle text {
   fill: var(--white);
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 900;
 }
 
@@ -1070,6 +1045,10 @@ body.is-changing .site-footer {
     transform: none;
     filter: none;
   }
+
+  .formula-track {
+    animation: none;
+  }
 }
 
 /* Responsive */
@@ -1118,8 +1097,8 @@ body.is-changing .site-footer {
     border-bottom: 0;
   }
 
-  .geometry-diagram {
-    max-width: 260px;
+  .unit-circle {
+    max-width: 300px;
   }
 
   .evidence-empty {
@@ -1188,10 +1167,6 @@ body.is-changing .site-footer {
   .hero-visual {
     box-shadow: 10px 10px 0 var(--black);
   }
-
-  .floating-equations span {
-    opacity: 0.028;
-  }
 }
 
 /* Print */
@@ -1219,8 +1194,8 @@ body.is-changing .site-footer {
   .site-footer,
   .math-watermark,
   .math-strip,
-  .floating-equations,
-  .geometry-diagram {
+  .formula-marquee,
+  .unit-circle {
     display: none !important;
   }
 
