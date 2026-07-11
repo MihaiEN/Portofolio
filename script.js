@@ -64,11 +64,11 @@ if (!reducedMotion && pageTransition) {
 
       setTimeout(() => {
         target.scrollIntoView({ behavior: "smooth", block: "start" });
-      }, 250);
+      }, 260);
 
       setTimeout(() => {
         document.body.classList.remove("is-changing");
-      }, 560);
+      }, 580);
     });
   });
 }
