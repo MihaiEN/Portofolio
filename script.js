@@ -2,6 +2,8 @@ const navToggle = document.querySelector(".nav-toggle");
 const navLinks = document.querySelector(".nav-links");
 const navAnchors = document.querySelectorAll(".nav-links a");
 const revealItems = document.querySelectorAll(".reveal");
+const pageLinks = document.querySelectorAll(".page-link");
+const pageTransition = document.querySelector(".page-transition");
 
 if (navToggle && navLinks) {
   navToggle.addEventListener("click", () => {
@@ -42,7 +44,37 @@ if (reducedMotion) {
   revealItems.forEach((item) => revealObserver.observe(item));
 }
 
+if (!reducedMotion && pageTransition) {
+  pageLinks.forEach((link) => {
+    link.addEventListener("click", (event) => {
+      const href = link.getAttribute("href");
+
+      if (!href || !href.startsWith("#")) return;
+
+      const target = document.querySelector(href);
+
+      if (!target) return;
+
+      event.preventDefault();
+
+      document.body.classList.add("is-changing");
+      pageTransition.classList.remove("active");
+      void pageTransition.offsetWidth;
+      pageTransition.classList.add("active");
+
+      setTimeout(() => {
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 250);
+
+      setTimeout(() => {
+        document.body.classList.remove("is-changing");
+      }, 560);
+    });
+  });
+}
+
 const sections = document.querySelectorAll("main section[id]");
+
 const sectionObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
