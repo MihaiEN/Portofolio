@@ -24,9 +24,20 @@
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
 
+  <div class="page-transition" aria-hidden="true">
+    <div class="transition-symbols">
+      <span>∫</span>
+      <span>∑</span>
+      <span>π</span>
+      <span>Δ</span>
+      <span>√</span>
+      <span>θ</span>
+    </div>
+  </div>
+
   <header class="site-header">
     <nav class="nav" aria-label="Main navigation">
-      <a class="brand" href="#top" aria-label="Go to homepage">
+      <a class="brand page-link" href="#top" aria-label="Go to homepage">
         <span class="brand-mark">MN</span>
         <span class="brand-text">
           <strong>Mihai-Emilian Niculae</strong>
@@ -46,27 +57,50 @@
       </button>
 
       <div class="nav-menu" id="nav-menu">
-        <a href="#profile">Profile</a>
-        <a href="#practice">Practice</a>
-        <a href="#experience">Experience</a>
-        <a href="#evidence">Evidence</a>
-        <a href="#principles">Principles</a>
-        <a href="#credentials">Credentials</a>
-        <a href="#contact">Contact</a>
+        <a class="page-link" href="#profile">Profile</a>
+        <a class="page-link" href="#practice">Practice</a>
+        <a class="page-link" href="#experience">Experience</a>
+        <a class="page-link" href="#evidence">Evidence</a>
+        <a class="page-link" href="#principles">Principles</a>
+        <a class="page-link" href="#credentials">Credentials</a>
+        <a class="page-link" href="#contact">Contact</a>
       </div>
     </nav>
   </header>
 
   <main id="main-content">
     <section class="hero" id="top" aria-labelledby="hero-title">
-      <div class="hero-pattern" aria-hidden="true">
+      <div class="formula-strip" aria-hidden="true">
+        <div class="formula-track">
+          <span>f′(x)</span>
+          <span>∫ f(x) dx</span>
+          <span>sin²θ + cos²θ = 1</span>
+          <span>Δy / Δx</span>
+          <span>∑ aₙ</span>
+          <span>P(A | B)</span>
+          <span>σ²</span>
+          <span>lim h→0</span>
+
+          <span>f′(x)</span>
+          <span>∫ f(x) dx</span>
+          <span>sin²θ + cos²θ = 1</span>
+          <span>Δy / Δx</span>
+          <span>∑ aₙ</span>
+          <span>P(A | B)</span>
+          <span>σ²</span>
+          <span>lim h→0</span>
+        </div>
+      </div>
+
+      <div class="symbol-field" aria-hidden="true">
+        <span>∫</span>
         <span>∑</span>
         <span>π</span>
         <span>Δ</span>
-        <span>∫</span>
+        <span>θ</span>
       </div>
 
-      <div class="container hero-grid">
+      <div class="container hero-layout">
         <div class="hero-copy reveal">
           <p class="eyebrow">STEM Education · Assessment · Curriculum</p>
 
@@ -78,8 +112,8 @@
 
           <p class="hero-intro">
             I design and deliver structured STEM learning across secondary, post-16 and international
-            settings. My work combines mathematics teaching, curriculum development, assessment
-            design and the careful use of learner evidence to improve planning and support.
+            settings. My work brings together mathematics teaching, curriculum development,
+            assessment design and the careful use of learner evidence.
           </p>
 
           <p class="hero-credentials">
@@ -87,18 +121,25 @@
           </p>
 
           <div class="hero-actions" aria-label="Main actions">
-            <a class="button button-primary" href="#experience">View experience</a>
-            <a class="button button-secondary" href="#evidence">Explore evidence</a>
-            <a class="button button-text" href="assets/evidence/cv.pdf" target="_blank" rel="noopener noreferrer">
+            <a class="button button-dark page-link" href="#experience">View experience</a>
+            <a class="button button-light page-link" href="#evidence">Explore evidence</a>
+            <a
+              class="button button-line"
+              href="assets/evidence/cv.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Download CV
             </a>
           </div>
         </div>
 
-        <aside class="hero-note reveal" aria-label="Professional statement">
-          <p>
+        <aside class="hero-editorial reveal" aria-label="Professional focus">
+          <p class="pull-quote">
             “Clarity is not simplification. It is precision.”
           </p>
+
+          <div class="editorial-rule"></div>
 
           <div class="hero-tags" aria-label="Professional areas">
             <span>STEM Teaching</span>
@@ -111,7 +152,7 @@
       </div>
     </section>
 
-    <section class="section section-cream" id="profile" aria-labelledby="profile-title">
+    <section class="section section-white" id="profile" aria-labelledby="profile-title">
       <div class="container">
         <div class="section-heading reveal">
           <p class="section-kicker">Profile</p>
@@ -122,14 +163,14 @@
           <div class="profile-copy reveal">
             <p>
               I work across secondary, post-16, tutoring and international education. Mathematics is
-              my main subject specialism, supported by wider work in STEM enrichment, assessment
-              writing, curriculum development and learner support.
+              my main subject specialism, with wider work in STEM enrichment, assessment writing,
+              curriculum development and learner support.
             </p>
 
             <p>
               I use student responses, quiz outcomes, written work and progress information to identify
-              misconceptions and improve future teaching. I am also interested in the responsible use of
-              digital tools and generative AI, where technology remains guided by subject knowledge,
+              misconceptions and refine future teaching. I am also interested in responsible educational
+              technology, where digital tools and generative AI remain guided by subject knowledge,
               safeguarding and professional judgement.
             </p>
           </div>
@@ -159,7 +200,7 @@
       </div>
     </section>
 
-    <section class="section section-white" id="practice" aria-labelledby="practice-title">
+    <section class="section section-black" id="practice" aria-labelledby="practice-title">
       <div class="container">
         <div class="section-heading reveal">
           <p class="section-kicker">Practice</p>
@@ -167,17 +208,17 @@
         </div>
 
         <div class="practice-grid">
-          <article class="practice-card practice-card-blue reveal">
+          <article class="practice-card practice-large reveal">
             <div class="card-topline">
               <span>01</span>
-              <div class="card-symbol" aria-hidden="true">∫</div>
+              <span aria-hidden="true">∫</span>
             </div>
 
             <h3>STEM Teaching and Enrichment</h3>
 
             <p>
-              I teach and support learners across secondary and post-16 STEM contexts, with mathematics
-              as my principal subject specialism.
+              Teaching and supporting learners across secondary and post-16 STEM contexts, with
+              mathematics as the principal subject specialism.
             </p>
 
             <ul>
@@ -187,57 +228,57 @@
             </ul>
           </article>
 
-          <article class="practice-card practice-card-cream reveal">
+          <article class="practice-card reveal">
             <div class="card-topline">
               <span>02</span>
-              <div class="card-symbol" aria-hidden="true">✓</div>
+              <span aria-hidden="true">✓</span>
             </div>
 
             <h3>Assessment and Examiner Practice</h3>
 
             <p>
-              I create and review assessment materials with attention to clarity, fairness, mark schemes
-              and the evidence students produce.
+              Creating and reviewing assessment materials with attention to clarity, fairness,
+              mark schemes and the evidence students produce.
             </p>
 
             <ul>
-              <li>Question writing and mark scheme development</li>
+              <li>Question writing</li>
+              <li>Mark scheme development</li>
               <li>Standardisation and quality assurance</li>
-              <li>Candidate performance review</li>
             </ul>
           </article>
 
-          <article class="practice-card practice-card-cream reveal">
+          <article class="practice-card reveal">
             <div class="card-topline">
               <span>03</span>
-              <div class="card-symbol" aria-hidden="true">→</div>
+              <span aria-hidden="true">→</span>
             </div>
 
             <h3>Curriculum and Learner Progress</h3>
 
             <p>
-              I develop structured resources and sequences that help learners build confidence,
-              prepare for examinations and understand the next step in their learning.
+              Developing structured resources and sequences that support examination preparation,
+              progression and independent study.
             </p>
 
             <ul>
-              <li>Schemes of work and curriculum sequencing</li>
-              <li>Formative assessment and revision planning</li>
-              <li>Support for international learners</li>
+              <li>Schemes of work and sequencing</li>
+              <li>Formative assessment</li>
+              <li>International learner support</li>
             </ul>
           </article>
 
-          <article class="practice-card practice-card-blue reveal">
+          <article class="practice-card practice-large reveal">
             <div class="card-topline">
               <span>04</span>
-              <div class="card-symbol" aria-hidden="true">⌁</div>
+              <span aria-hidden="true">⌁</span>
             </div>
 
             <h3>Digital Learning and Data</h3>
 
             <p>
-              I use digital resources, quiz data and progress information to support planning,
-              feedback and reflective practice.
+              Using digital resources, quiz outcomes and progress information to support planning,
+              feedback and reflective teaching.
             </p>
 
             <ul>
@@ -250,7 +291,7 @@
       </div>
     </section>
 
-    <section class="section section-blue" id="experience" aria-labelledby="experience-title">
+    <section class="section section-white" id="experience" aria-labelledby="experience-title">
       <div class="container">
         <div class="section-heading reveal">
           <p class="section-kicker">Experience</p>
@@ -259,11 +300,11 @@
 
         <div class="timeline" aria-label="Professional experience timeline">
           <article class="timeline-item reveal">
-            <div class="timeline-marker" aria-hidden="true"></div>
             <div class="timeline-date">
               <span>Current</span>
-              Jun 2026 – Present
+              <strong>Jun 2026 – Present</strong>
             </div>
+
             <div class="timeline-content">
               <p class="timeline-category">Assessment and Examining</p>
               <h3>Principal Examiner</h3>
@@ -272,62 +313,65 @@
                 Responsibilities include assessment materials, mark schemes, examiner guidance,
                 standardisation and candidate performance review.
               </p>
-              <ul>
-                <li>Assessment quality assurance</li>
-                <li>Mark schemes and examiner guidance</li>
-                <li>Candidate performance review</li>
-              </ul>
+
+              <div class="timeline-points">
+                <span>Assessment QA</span>
+                <span>Mark schemes</span>
+                <span>Performance review</span>
+              </div>
             </div>
           </article>
 
           <article class="timeline-item reveal">
-            <div class="timeline-marker" aria-hidden="true"></div>
             <div class="timeline-date">
-              Feb 2026 – Jul 2026
+              <strong>Feb 2026 – Jul 2026</strong>
             </div>
+
             <div class="timeline-content">
               <p class="timeline-category">Classroom Teaching</p>
               <h3>Teacher of Mathematics</h3>
               <p>
                 Planned and taught secondary and post-16 mathematics, including examination groups.
-                The work included classroom teaching, revision, intervention, departmental support,
+                Work included classroom teaching, revision, intervention, departmental support,
                 reasoning and problem-solving.
               </p>
-              <ul>
-                <li>KS3–KS5 mathematics</li>
-                <li>Revision and intervention</li>
-                <li>Mathematical reasoning</li>
-              </ul>
+
+              <div class="timeline-points">
+                <span>KS3–KS5</span>
+                <span>Revision</span>
+                <span>Reasoning</span>
+              </div>
             </div>
           </article>
 
           <article class="timeline-item reveal">
-            <div class="timeline-marker" aria-hidden="true"></div>
             <div class="timeline-date">
               <span>Current</span>
-              Nov 2025 – Present
+              <strong>Nov 2025 – Present</strong>
             </div>
+
             <div class="timeline-content">
               <p class="timeline-category">Curriculum and Assessment</p>
               <h3>Assessment and Curriculum Associate</h3>
               <p>
-                Develop schemes of work, assessment materials and curriculum resources for international
-                learners. The work includes mathematical application, problem-solving, data interpretation
-                and preparation for UK higher education pathways.
+                Develop schemes of work, assessment materials and curriculum resources for
+                international learners, including mathematical application, problem-solving,
+                data interpretation and preparation for UK higher education pathways.
               </p>
-              <ul>
-                <li>Curriculum resources</li>
-                <li>Assessment materials</li>
-                <li>International learner support</li>
-              </ul>
+
+              <div class="timeline-points">
+                <span>Curriculum</span>
+                <span>Assessment</span>
+                <span>International learners</span>
+              </div>
             </div>
           </article>
 
           <article class="timeline-item reveal">
-            <div class="timeline-marker" aria-hidden="true"></div>
             <div class="timeline-date">
-              Aug 2025 – Jan 2026
+              <strong>Aug 2025 – Jan 2026</strong>
             </div>
+
             <div class="timeline-content">
               <p class="timeline-category">International Tutoring</p>
               <h3>Mathematics Specialist</h3>
@@ -335,19 +379,20 @@
                 Supported learners preparing for GCSE, IGCSE, A-Level, IB, AP and SAT mathematics.
                 Teaching was adapted to prior attainment, examination goals and individual learning needs.
               </p>
-              <ul>
-                <li>GCSE, IGCSE and A-Level</li>
-                <li>IB, AP and SAT support</li>
-                <li>Individual learning goals</li>
-              </ul>
+
+              <div class="timeline-points">
+                <span>GCSE / IGCSE</span>
+                <span>A-Level</span>
+                <span>IB / AP / SAT</span>
+              </div>
             </div>
           </article>
 
           <article class="timeline-item reveal">
-            <div class="timeline-marker" aria-hidden="true"></div>
             <div class="timeline-date">
-              Nov 2024 – Jul 2025
+              <strong>Nov 2024 – Jul 2025</strong>
             </div>
+
             <div class="timeline-content">
               <p class="timeline-category">Online STEM Teaching</p>
               <h3>Mathematics and Science Teacher</h3>
@@ -355,19 +400,20 @@
                 Delivered online mathematics and science across GCSE, IGCSE and A-Level programmes.
                 Developed digital resources, quizzes and assessments for online learning.
               </p>
-              <ul>
-                <li>Online mathematics and science</li>
-                <li>Digital learning resources</li>
-                <li>Quizzes and assessments</li>
-              </ul>
+
+              <div class="timeline-points">
+                <span>Online teaching</span>
+                <span>Quizzes</span>
+                <span>STEM resources</span>
+              </div>
             </div>
           </article>
 
           <article class="timeline-item reveal">
-            <div class="timeline-marker" aria-hidden="true"></div>
             <div class="timeline-date">
-              Jun 2024 – May 2025
+              <strong>Jun 2024 – May 2025</strong>
             </div>
+
             <div class="timeline-content">
               <p class="timeline-category">Data and Reporting</p>
               <h3>Data Analyst</h3>
@@ -376,18 +422,19 @@
                 dashboards and visualisations using Excel, Power BI and Tableau, and communicated
                 findings for project planning and decision-making.
               </p>
-              <ul>
-                <li>Python, SQL and Excel</li>
-                <li>Power BI and Tableau</li>
-                <li>Reporting and visualisation</li>
-              </ul>
+
+              <div class="timeline-points">
+                <span>Python / SQL</span>
+                <span>Power BI</span>
+                <span>Reporting</span>
+              </div>
             </div>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section section-white" id="evidence" aria-labelledby="evidence-title">
+    <section class="section section-black" id="evidence" aria-labelledby="evidence-title">
       <div class="container">
         <div class="section-heading reveal">
           <p class="section-kicker">Evidence</p>
@@ -420,11 +467,21 @@
             </div>
 
             <div class="evidence-actions">
-              <a class="button button-primary" href="assets/evidence/curriculum-assessment-data-evidence-public.pdf" target="_blank" rel="noopener noreferrer">
+              <a
+                class="button button-light"
+                href="assets/evidence/curriculum-assessment-data-evidence-public.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 View evidence
               </a>
 
-              <a class="button button-secondary" href="assets/evidence/curriculum-assessment-data-evidence-public.pdf" target="_blank" rel="noopener noreferrer">
+              <a
+                class="button button-outline-white"
+                href="assets/evidence/curriculum-assessment-data-evidence-public.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Open full PDF
               </a>
             </div>
@@ -451,15 +508,11 @@
             Public materials exclude student names, school names, confidential assessment content,
             identifiable student work and private data.
           </p>
-          <p>
-            Evidence is selected and anonymised in line with safeguarding, professional confidentiality
-            and assessment integrity.
-          </p>
         </div>
       </div>
     </section>
 
-    <section class="section section-cream" id="principles" aria-labelledby="principles-title">
+    <section class="section section-white" id="principles" aria-labelledby="principles-title">
       <div class="container">
         <div class="section-heading reveal">
           <p class="section-kicker">Principles</p>
@@ -506,7 +559,7 @@
       </div>
     </section>
 
-    <section class="section section-white" id="credentials" aria-labelledby="credentials-title">
+    <section class="section section-black" id="credentials" aria-labelledby="credentials-title">
       <div class="container">
         <div class="section-heading reveal">
           <p class="section-kicker">Credentials</p>
@@ -555,25 +608,30 @@
 
     <section class="contact-section" id="contact" aria-labelledby="contact-title">
       <div class="container contact-panel reveal">
-        <div>
+        <div class="contact-copy">
           <p class="section-kicker">Contact</p>
           <h2 id="contact-title">Professional enquiries.</h2>
 
           <p>
             For enquiries relating to STEM teaching, mathematics education, tutoring, curriculum
-            development or assessment, please use the contact details below.
+            development or assessment, please use the details below.
           </p>
         </div>
 
         <div class="contact-actions">
-          <a class="contact-card contact-card-primary" href="mailto:niculaemihai1322@gmail.com">
+          <a class="contact-card contact-card-main" href="mailto:niculaemihai1322@gmail.com">
             <span>Email</span>
             <strong>niculaemihai1322@gmail.com</strong>
           </a>
 
-          <a class="contact-card" href="#" target="_blank" rel="noopener noreferrer">
+          <a
+            class="contact-card"
+            href="https://www.linkedin.com/in/mihai-emilian-niculae-10a106236/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <span>LinkedIn</span>
-            <strong>Professional profile</strong>
+            <strong>Open professional profile</strong>
           </a>
 
           <a class="contact-card" href="assets/evidence/cv.pdf" target="_blank" rel="noopener noreferrer">
