@@ -798,67 +798,151 @@ h3 {
   border-bottom: 1px solid var(--line);
 }
 
-.global-layout {
-  display: grid;
-  gap: 2rem;
-  align-items: start;
+.global-intro {
+  max-width: 880px;
+  margin-bottom: 2rem;
 }
 
-.global-copy {
-  max-width: 720px;
-}
-
-.global-copy p {
+.global-intro p {
   font-size: 1.05rem;
 }
 
-.global-actions {
-  display: flex;
-  flex-direction: column;
-  gap: 0.7rem;
-  margin-top: 1.2rem;
-  max-width: 380px;
+.pathway-summary {
+  display: grid;
+  gap: 1px;
+  margin-bottom: 1.4rem;
+  background: var(--black);
+  border: 1px solid var(--black);
+}
+
+.pathway-summary article {
+  background: var(--white);
+  padding: 1rem;
+}
+
+.pathway-summary span,
+.pathway-summary strong {
+  display: block;
+}
+
+.pathway-summary span {
+  margin-bottom: 0.4rem;
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.pathway-summary strong {
+  color: var(--black);
+  font-size: clamp(1.1rem, 2vw, 1.55rem);
+  line-height: 1.1;
+  letter-spacing: -0.04em;
 }
 
 .world-map-panel {
   border-top: 1px solid var(--black);
   border-bottom: 1px solid var(--black);
-  padding: 1rem 0;
+  padding: 1.4rem 0;
+  margin-bottom: 1.5rem;
 }
 
 .map-frame {
   position: relative;
   width: 100%;
-  min-height: 360px;
-  overflow: hidden;
   background: var(--white);
+  overflow: hidden;
 }
 
 .world-map {
+  display: block;
   width: 100%;
   height: auto;
-  display: block;
-  opacity: 1;
 }
 
-.map-land {
+.map-outline path {
+  fill: #f8f8f8;
+  stroke: var(--black);
+  stroke-width: 1.3;
+  vector-effect: non-scaling-stroke;
+}
+
+.route-lines path {
   fill: none;
   stroke: var(--black);
   stroke-width: 1.25;
+  stroke-dasharray: 5 8;
+  opacity: 0.52;
   vector-effect: non-scaling-stroke;
+  animation: routePulse 4.5s ease-in-out infinite;
+}
+
+@keyframes routePulse {
+  0%,
+  100% {
+    opacity: 0.28;
+    stroke-dashoffset: 0;
+  }
+
+  50% {
+    opacity: 0.75;
+    stroke-dashoffset: -18;
+  }
+}
+
+.map-origin {
+  position: absolute;
+  left: 42.8%;
+  top: 30%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  background: var(--black);
+  color: var(--white);
+  padding: 0.32rem 0.5rem;
+  font-size: 0.64rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
 }
 
 .map-pin {
   position: absolute;
   transform: translate(-50%, -50%);
-  z-index: 2;
+  z-index: 3;
+}
+
+.map-pin:focus-visible {
+  outline: 2px solid var(--black);
+  outline-offset: 8px;
+}
+
+.pin-number {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  display: grid;
+  place-items: center;
+  width: 25px;
+  height: 25px;
+  background: var(--black);
+  color: var(--white);
+  border-radius: 50%;
+  font-size: 0.62rem;
+  font-weight: 900;
+  z-index: 4;
+}
+
+.pin-left .pin-number {
+  right: auto;
+  left: 1rem;
 }
 
 .pin-dot {
   position: relative;
+  display: block;
   width: 14px;
   height: 14px;
-  display: block;
   background: var(--black);
   border: 2px solid var(--white);
   outline: 1px solid var(--black);
@@ -868,45 +952,56 @@ h3 {
 .pin-dot::after {
   content: "";
   position: absolute;
-  inset: -8px;
+  inset: -9px;
   border: 1px solid var(--black);
   border-radius: 50%;
   opacity: 0.28;
-  animation: pinPulse 2.2s ease-in-out infinite;
+  animation: pinPulse 2s ease-in-out infinite;
 }
 
 @keyframes pinPulse {
   0% {
     transform: scale(0.75);
-    opacity: 0.3;
+    opacity: 0.35;
   }
 
   70% {
-    transform: scale(1.45);
+    transform: scale(1.5);
     opacity: 0;
   }
 
   100% {
-    transform: scale(1.45);
+    transform: scale(1.5);
     opacity: 0;
   }
 }
 
 .pin-label {
   position: absolute;
-  left: 1rem;
   top: 50%;
-  min-width: 170px;
+  left: 1rem;
   transform: translateY(-50%);
+  min-width: 220px;
+  padding: 0.5rem 0.65rem;
   background: var(--white);
   border: 1px solid var(--black);
-  padding: 0.45rem 0.55rem;
   box-shadow: 6px 6px 0 var(--black);
+  transition: transform var(--transition);
+}
+
+.map-pin:hover .pin-label,
+.map-pin:focus-visible .pin-label {
+  transform: translateY(-50%) translateX(4px);
 }
 
 .pin-left .pin-label {
   left: auto;
   right: 1rem;
+}
+
+.pin-left:hover .pin-label,
+.pin-left:focus-visible .pin-label {
+  transform: translateY(-50%) translateX(-4px);
 }
 
 .pin-label strong,
@@ -916,38 +1011,37 @@ h3 {
 }
 
 .pin-label strong {
-  color: var(--black);
   font-size: 0.78rem;
   font-weight: 900;
+  color: var(--black);
 }
 
 .pin-label small {
-  color: var(--muted);
-  font-size: 0.7rem;
   margin-top: 0.2rem;
+  font-size: 0.7rem;
+  color: var(--muted);
   text-transform: uppercase;
   letter-spacing: 0.08em;
 }
 
-.pin-standrews {
-  left: 47%;
-  top: 34%;
+.pin-st-andrews {
+  left: 42.1%;
+  top: 24.8%;
 }
 
 .pin-lse {
-  left: 49%;
-  top: 38%;
+  left: 42.4%;
+  top: 28.2%;
 }
 
 .pin-sydney {
-  left: 84%;
-  top: 76%;
+  left: 83.6%;
+  top: 76.1%;
 }
 
 .destination-grid {
   display: grid;
   gap: 1px;
-  margin-top: 1.4rem;
   background: var(--black);
   border: 1px solid var(--black);
 }
@@ -968,11 +1062,17 @@ h3 {
 }
 
 .destination-card h3 {
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.75rem;
 }
 
-.destination-card p {
-  margin-bottom: 0;
+.destination-card ul {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.destination-card li {
+  margin-bottom: 0.35rem;
+  color: var(--muted);
 }
 
 /* EVIDENCE */
@@ -1285,8 +1385,7 @@ h3 {
 
   .hero-actions,
   .evidence-actions,
-  .cv-actions,
-  .global-actions {
+  .cv-actions {
     flex-direction: row;
     flex-wrap: wrap;
   }
@@ -1304,8 +1403,7 @@ h3 {
     padding: 1rem 0;
   }
 
-  .principles-grid,
-  .credentials-grid,
+  .pathway-summary,
   .destination-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
@@ -1427,10 +1525,6 @@ h3 {
     grid-row: 1;
   }
 
-  .global-layout {
-    grid-template-columns: minmax(0, 0.52fr) minmax(480px, 1fr);
-  }
-
   .evidence-feature,
   .cv-feature {
     grid-template-columns: minmax(0, 0.7fr) minmax(430px, 1fr);
@@ -1438,39 +1532,71 @@ h3 {
   }
 }
 
-/* SMALL PHONES */
+/* MOBILE MAP */
 
-@media (max-width: 520px) {
+@media (max-width: 700px) {
   .map-frame {
     min-height: 440px;
   }
 
   .world-map {
-    transform: scale(1.35);
-    transform-origin: 50% 50%;
-    margin-top: 3rem;
+    width: 1080px;
+    max-width: none;
+    transform: translateX(-240px);
   }
 
   .pin-label {
-    min-width: 140px;
+    min-width: 150px;
+    padding: 0.45rem 0.55rem;
     box-shadow: 4px 4px 0 var(--black);
   }
 
-  .pin-standrews {
-    left: 39%;
+  .pin-label strong {
+    font-size: 0.72rem;
+  }
+
+  .pin-label small {
+    font-size: 0.66rem;
+  }
+
+  .map-origin {
+    left: 44%;
+    top: 29%;
+  }
+
+  .pin-st-andrews {
+    left: 38%;
     top: 25%;
   }
 
   .pin-lse {
-    left: 42%;
-    top: 39%;
+    left: 39%;
+    top: 30%;
   }
 
   .pin-sydney {
-    left: 75%;
-    top: 78%;
+    left: 78%;
+    top: 76%;
+  }
+
+  .pin-number {
+    width: 22px;
+    height: 22px;
+    font-size: 0.56rem;
   }
 }
+
+@media (max-width: 560px) {
+  .pin-label {
+    min-width: 130px;
+  }
+
+  .pin-left .pin-label {
+    right: -0.5rem;
+  }
+}
+
+/* SMALL PHONES */
 
 @media (max-width: 390px) {
   .container,
@@ -1493,8 +1619,7 @@ h3 {
 
   .hero-actions .button,
   .evidence-actions .button,
-  .cv-actions .button,
-  .global-actions .button {
+  .cv-actions .button {
     width: 100%;
   }
 
