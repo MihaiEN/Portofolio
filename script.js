@@ -4,6 +4,8 @@ const navLinks = document.querySelectorAll(".nav-menu a");
 const revealItems = document.querySelectorAll(".reveal");
 const sections = document.querySelectorAll("main section[id]");
 const yearElement = document.querySelector("#current-year");
+const pageLinks = document.querySelectorAll(".page-link");
+const pageTransition = document.querySelector(".page-transition");
 
 if (yearElement) {
   yearElement.textContent = new Date().getFullYear();
@@ -63,6 +65,30 @@ if (prefersReducedMotion) {
   revealItems.forEach((item) => item.classList.add("is-visible"));
 }
 
+if (!prefersReducedMotion && pageTransition) {
+  pageLinks.forEach((link) => {
+    link.addEventListener("click", (event) => {
+      const href = link.getAttribute("href");
+
+      if (!href || !href.startsWith("#")) return;
+
+      const target = document.querySelector(href);
+
+      if (!target) return;
+
+      event.preventDefault();
+
+      pageTransition.classList.remove("active");
+      void pageTransition.offsetWidth;
+      pageTransition.classList.add("active");
+
+      setTimeout(() => {
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 240);
+    });
+  });
+}
+
 if ("IntersectionObserver" in window && navLinks.length > 0 && sections.length > 0) {
   const activeSectionObserver = new IntersectionObserver(
     (entries) => {
@@ -78,7 +104,7 @@ if ("IntersectionObserver" in window && navLinks.length > 0 && sections.length >
       });
     },
     {
-      threshold: 0.45
+      threshold: 0.42
     }
   );
 
