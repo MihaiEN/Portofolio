@@ -2643,3 +2643,88 @@ h3 {
     box-shadow: none;
   }
 }
+
+/* V7 — employer-ready final polish */
+.role-qualifier {
+  display: inline;
+  color: var(--muted);
+  font-size: 0.72em;
+  font-weight: 650;
+  letter-spacing: -0.02em;
+}
+
+.additional-evidence {
+  display: grid;
+  gap: 1rem;
+  margin-top: clamp(2rem, 5vw, 3.5rem);
+  padding: clamp(1.15rem, 3vw, 1.7rem);
+  border: 1px solid rgba(255, 253, 248, 0.18);
+  border-radius: 20px;
+  background: linear-gradient(135deg, rgba(95, 145, 204, 0.16), rgba(255, 253, 248, 0.04));
+}
+
+.additional-evidence h3 {
+  max-width: 780px;
+  margin: 0;
+  color: var(--white);
+  font-size: clamp(1.35rem, 2.8vw, 2.15rem);
+}
+
+.additional-evidence > p {
+  max-width: 850px;
+  margin: 0;
+  color: rgba(255, 253, 248, 0.76);
+}
+
+.additional-evidence-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.additional-evidence-tags span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding: 0.32rem 0.62rem;
+  border: 1px solid rgba(255, 253, 248, 0.22);
+  border-radius: 999px;
+  color: var(--white);
+  font-size: 0.69rem;
+  font-weight: 700;
+}
+
+.footer-grid > p:last-child span:first-child {
+  display: block;
+  margin-bottom: 0.15rem;
+  opacity: 0.62;
+  font-size: 0.68rem;
+}
+
+@media (min-width: 900px) {
+  .additional-evidence {
+    grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
+    align-items: start;
+  }
+
+  .additional-evidence-tags {
+    grid-column: 1 / -1;
+  }
+}
+
+@media print {
+  .additional-evidence {
+    border-color: #b7c7d9;
+    background: #eef4fa !important;
+  }
+
+  .additional-evidence h3,
+  .additional-evidence > p,
+  .additional-evidence-tags span {
+    color: #14243a !important;
+  }
+
+  .additional-evidence-tags span {
+    border-color: #b7c7d9;
+  }
+}

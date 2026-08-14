@@ -1,15 +1,19 @@
-MIHAI-EMILIAN NICULAE — PORTFOLIO V6
+MIHAI-EMILIAN NICULAE — PORTFOLIO V7 (CV-READY REVIEW)
 
-This version adds:
-- An anonymised learner success story using selected A-Level Chemistry and Mathematics component results
-- University of St Andrews Chemistry progression outcome
-- A full Digital Practice & Technology section
-- ClassIn, Zoom, Google Meet, Moodle, Canva, Google Forms/Sheets, Excel, Power BI, Tableau, Python and SQL
-- A responsible AI workflow and privacy / human-review principles
-- Refined employer-facing navigation and hero messaging
+Upload these files to the root of the GitHub Pages repository:
+- index.html
+- style.css
+- script.js
 
-GitHub Pages update:
-Replace index.html and style.css with the files in this folder.
-script.js is unchanged from V5.
+V7 final-review changes:
+- Employer-facing copy tightened throughout
+- Removed visible "planned"/unfinished evidence placeholders
+- Added a complete "further evidence available" panel instead
+- Added structured Person metadata for search engines
+- Clarified NCC examiner wording and assessment responsibilities
+- Further anonymised learner-success attainment evidence
+- Refined AI credential wording
+- Reframed professional-principles and contact sections for employers
+- Added a visible Aug 2026 portfolio-review marker
 
-Do not upload raw learner result documents or identifying student evidence to the public repository.
+No learner source documents, secure assessment materials or private evidence files are included in this public package.
