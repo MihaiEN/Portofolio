@@ -1,20 +1,18 @@
-MIHAI PORTFOLIO V4 — ASPIRE EVIDENCE UPDATE
+PORTFOLIO V5 — NCC EXAMINER EVIDENCE
 
-CHANGED FILES:
+Upload/replace these files in the root of the GitHub Pages repository:
 - index.html
 - style.css
 
-UNCHANGED:
-- script.js
+script.js is unchanged from V4 and is included in the ZIP for convenience.
 
-WHAT'S NEW:
-- Added E02 Aspire Prep evidence case
-- Added ClassIn + simultaneous collaborative-whiteboard tutoring workflow
-- Added anonymised IGCSE Higher and IB Mathematics evidence summaries
-- Added diagnostic / assessment / feedback / mark-scheme evidence architecture
-- Changed the full visual palette from green accents to beige + layered blues
-- No learner names or original private tutoring files are included on the public site
+New in V5:
+- E03 NCC Education examiner / assessment case study
+- Level 2 IBM and Level 3 FAB specification summary cards
+- specification-to-paper assessment lifecycle
+- coverage, validity, balance and reliability quality lenses
+- mark-scheme design model
+- examiner reporting / review workflow
+- explicit confidentiality protocol for secure assessment content
 
-GITHUB:
-Replace index.html and style.css in the repository root.
-You can keep the existing script.js, or upload all three files from this folder.
+Do not upload secure exam papers, candidate scripts, internal mark schemes or confidential examiner reports to the public repository.
