@@ -1,18 +1,15 @@
-PORTFOLIO V5 — NCC EXAMINER EVIDENCE
+MIHAI-EMILIAN NICULAE — PORTFOLIO V6
 
-Upload/replace these files in the root of the GitHub Pages repository:
-- index.html
-- style.css
+This version adds:
+- An anonymised learner success story using selected A-Level Chemistry and Mathematics component results
+- University of St Andrews Chemistry progression outcome
+- A full Digital Practice & Technology section
+- ClassIn, Zoom, Google Meet, Moodle, Canva, Google Forms/Sheets, Excel, Power BI, Tableau, Python and SQL
+- A responsible AI workflow and privacy / human-review principles
+- Refined employer-facing navigation and hero messaging
 
-script.js is unchanged from V4 and is included in the ZIP for convenience.
+GitHub Pages update:
+Replace index.html and style.css with the files in this folder.
+script.js is unchanged from V5.
 
-New in V5:
-- E03 NCC Education examiner / assessment case study
-- Level 2 IBM and Level 3 FAB specification summary cards
-- specification-to-paper assessment lifecycle
-- coverage, validity, balance and reliability quality lenses
-- mark-scheme design model
-- examiner reporting / review workflow
-- explicit confidentiality protocol for secure assessment content
-
-Do not upload secure exam papers, candidate scripts, internal mark schemes or confidential examiner reports to the public repository.
+Do not upload raw learner result documents or identifying student evidence to the public repository.
