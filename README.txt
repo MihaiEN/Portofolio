@@ -1,13 +1,20 @@
-PORTFOLIO V3 — INSIGHT EVIDENCE CASE
+MIHAI PORTFOLIO V4 — ASPIRE EVIDENCE UPDATE
 
-GitHub update from V2:
-- Replace index.html
-- Replace style.css
-- script.js is unchanged (included here so this ZIP is complete)
+CHANGED FILES:
+- index.html
+- style.css
 
-New evidence case:
-E01 — Insight Education & Partners
-Programme design · assessment · learner reporting · data systems · STEM delivery
+UNCHANGED:
+- script.js
 
-Privacy:
-The public case uses only anonymised/aggregated descriptions and ranges. Do not upload the original learner reports, internal timetables, workshop materials, score sheets or raw programme data to the public GitHub repository.
+WHAT'S NEW:
+- Added E02 Aspire Prep evidence case
+- Added ClassIn + simultaneous collaborative-whiteboard tutoring workflow
+- Added anonymised IGCSE Higher and IB Mathematics evidence summaries
+- Added diagnostic / assessment / feedback / mark-scheme evidence architecture
+- Changed the full visual palette from green accents to beige + layered blues
+- No learner names or original private tutoring files are included on the public site
+
+GITHUB:
+Replace index.html and style.css in the repository root.
+You can keep the existing script.js, or upload all three files from this folder.
